@@ -26,3 +26,9 @@ function showdata(name, textbox) {
     document.getElementById('lbl').innerHTML = 'hello' + "  " + name;
     textbox.value = 'done';
 }
+
+function showinfo(id, name, address) {
+    var msg = "your ID: " + id + "<br> your Name is : " + name + "<br> your address is :" + address;
+    window.lbl2.innerHTML = msg;
+
+}
