@@ -1,0 +1,64 @@
+<style>
+    div {
+        border: 2px solid;
+        background: rgb(0, 255, 106);
+        height: 150px;
+        width: 250px;
+    }
+</style>
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <h3 id="lbl1">welcome1</h3>
+    <h3 ondblclick="this.style.color=' pink';">welcome2</h3>
+    <h3 onmousedown="this.style.color='green';" onmouseup="this.style.color='black';">welcome3</h3>
+    <h3 onmouseenter="this.style.background='green';" onmouseleave="this.style.background='yellow';">welcome4</h3>
+    <h3 onmouseover="this.style.background='brown';" onmouseout="this.style.background='#345';">welcome5</h3>
+    <h3 onmousedown="big(this);" onmouseup="small(this);">welcome6</h3>
+    <h3 id="lbl7 ">welcome7</h3>
+    <hr>
+    <div onmousemove="getXY(event);" onmouseout="window.lbl10.innerHTML='out';"></div>
+    <h6 id='lbl10'> out </h6>
+    <script>
+        //ondbclick double clicks 
+        //onmousedown clickkkkked
+        //onmouseup not clikcked
+        // onmouseenter passé sur l'objet ==onmouseover 
+        //onmouseleave ne passe pas sur l'objet ==onmouseout
+        window.lbl1.style.color = "red ";
+
+        function big(lbl) {
+            lbl.style.fontSize = "120px";
+        }
+
+        function small(lbl) {
+            lbl.style.fontSize = "20px";
+        }
+
+        function getXY(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            window.lbl10.innerHTML = "X: " + x + ";  " + "Y :" + y;
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous ">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+</body>
+
+</html>
